@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>점심 메뉴 투표</title>
+	<style>
+		@font-face {
+	    	font-family: 'Vitro_core';
+	    	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Vitro_core.woff') format('woff');
+	    	font-weight: normal;
+	    	font-style: normal;
+		}
+		@font-face {
+		    font-family: 'Cafe24SsurroundAir';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}		
+		
+		
+		
+		*{margin: 0; padding: 0;}
+		body{width:700px; height:700px; font-family: 'Cafe24SsurroundAir';}
+		#container{
+			width: 100vw; height:100vh;
+			background-image: url("/Web01/image/food.jpg");
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			opacity: 0.5;
+		}
+		.title{
+			font-family: 'Vitro_core';
+			font-size: 30pt;
+			color:black;
+			position: absolute;
+			width:400px; 
+			height:400px;
+			background-color: white;
+		    left: 50%; top: 50%; /* 위치값 -> %는 부모(바로 상위 Tag) 크기 기준 */
+            margin-left: -200px; /* margin : 테두리 밖으로 설정되는 여백 */ 
+            margin-top: -200px;
+			text-align: center;		
+			opacity: 0.95;
+		}
+		.content{
+			font-family: 'Cafe24SsurroundAir';
+			font-size: 10pt;
+			width: 350px;
+			height: 50px;
+			position: absolute;
+			left: 50%; top: 60%;
+			margin-left: -175px; /* margin : 테두리 밖으로 설정되는 여백 */ 
+            margin-top: -175px;
+			text-align: center;	
+			opacity: 0.0;
+		}
+		
+		hr{margin:10px;}
+		
+		table{ /* border: 2px solid black; */
+			left: 15%; top:200%;
+			position : absolute;
+			width : 250px;
+			text-align: center;	
+		}
+		tr{ width:
+		
+		}
+
+		}
+
+
+	</style>
+<script src="/Web01/myLib/jquery-3.2.1.min.js"></script>
+<script>
+ $(function(){ 
+	
+	$('#container').css({
+		opacity:"0.1"
+	}).animate({
+		opacity:"0.5"
+	},1500)//container_css
+	
+	$('.title').css({
+		left: "40%",
+		opacity: "0.1"
+	}).animate({
+		left: "50%",
+		opacity: "0.95"
+	},1500)//title_css
+	
+	setTimeout(function() {
+		$('.content').css({
+			opacity: "0.0"
+		}).animate({
+			opacity: "0.95"
+		},1000);
+	}, 1500);//setTimeout
+	
+ })
+
+</script>
+</head>
+<body>
+	<div id = "container">		
+	</div>
+	<div class ="title">
+		<br>
+		오늘의 점심메뉴 
+		<div class ="content">
+			<table>
+				<form action="/Web01/lunchlogin" method=post>
+				<h2>
+				<tr><td><label for=pnum> 핸드폰번호 </label></td>
+				 	<td><input type="text" name=pnum id=pnum></td>
+				</tr>
+				
+				<tr><td><label for=pw> 비 밀 번 호 </label></td>
+					<td><input type="password" name=pw id=pw></td>
+				</tr>
+				<tr><td></td>	
+					<td><br>
+					
+					<input type="submit" value=로그인>&nbsp;
+					<input type="reset" value="취소">&nbsp;
+					</form>
+					<button onclick="location.href='./lunchJoin.html'">회원가입</button >
+					</td>
+				</tr>	
+				</h2>
+			</table>
+		</div>
+	</div>
+
+	
+	
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>** LeftMenu **</title>
+	<style>
+		*{padding: 3px;}
+		ul{list-style: none;}
+		.title{
+			color: black;
+		}
+		
+		ul a{
+			font-size: 20px; font-weight: bold; color: gray;		
+			text-decoration: none;
+			line-height: 26px;
+		}
+		ul ul{display:none;}
+		ul li:hover ul{ display:block;}
+		ul ul li a:hover{color: green;}
+	</style>
+</head>
+<body>
+	<br>
+	<ul>
+		<li><a class="title" href="">MyMenu</a>
+			<ul>
+			   <li><a href="myintro.html" target="main">점심 뭐먹지?</a>
+			   <li><a href="myPage.html"  target="main">점심메뉴 투표</a>
+			</ul>
+		<li><a class="title" href="">GoodSite</a>
+			<ul>
+			   <li><a href="https://www.w3schools.com/colors/colors_groups.asp" target="_blank">ColorPicker</a>
+			   <li><a href="https://oracle.com"  target="_blank">Oracle</a>
+			   <li><a href="http://docs.oracle.com/javase/8/docs/api"  target="_blank">JavaAPI</a>
+			   <li><a href="http://www.eclipse.org"  target="_blank">Eclips</a>
+			   <li><a href="http://tomcat.apache.org"  target="_blank">Tomcat</a>
+			</ul>
+		<li><a class="title" href="">HTML</a>	
+			<ul>
+			   <li><a href="../html01/ex01_start.html" target="main" >Start</a>
+			   <li><a href="../html01/ex02_specialCharacter.html" target="main">SpecialC</a>
+			   <li><a href="../html01/ex03_imageLink.html" target="main">Image</a>
+			</ul>
+		<li><a class="title" href="" >CSS</a>	
+			<ul>
+			   <li><a href="../css01/ex01_startCss.html" target="main" >StartCss</a>
+			   <li><a href="../css01/ex03_03struChild.html" target="main">struChild</a>
+			   <li><a href="../css01/ex03_04state.html" target="main">State</a>
+			</ul>
+			<br>
+		<li><a href="./main.html" target="main">[HOME]</a></h3>
+	</ul>
+</body>
+<!-- 
+	** target 속성
+		=> 표시할 창 또는 frame에 관한 정보
+		=> defalt:현재창, target=_blank:새창  또는 frame 이름의 위치 
+	-->
+</html>

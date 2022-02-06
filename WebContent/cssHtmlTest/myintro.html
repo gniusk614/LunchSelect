@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>점심 뭐먹지?</title>
+	
+	<style>
+		@font-face {
+		    font-family: 'Cafe24SsurroundAir';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+		@font-face {
+	    	font-family: 'Vitro_core';
+	    	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Vitro_core.woff') format('woff');
+	    	font-weight: normal;
+	    	font-style: normal;
+		}
+		*{margin: 0; padding: 0;}
+		body{width:700px; height:700px; font-family: 'Cafe24SsurroundAir';}
+		#container{
+			width: 100vw; height:100vh;
+			background-image: url("./image/food.jpg");
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			opacity: 0.5;
+		}
+		.title{
+			font-family: 'Vitro_core';
+			font-size: 30pt;
+			color:black;
+			position: absolute;
+			width:400px; 
+			height:400px;
+			background-color: white;
+		    left: 50%; top: 50%; /* 위치값 -> %는 부모(바로 상위 Tag) 크기 기준 */
+            margin-left: -200px; /* margin : 테두리 밖으로 설정되는 여백 */ 
+            margin-top: -200px;
+			text-align: center;		
+			opacity: 0.95;
+		}
+		.content{
+			font-family: 'Cafe24SsurroundAir';
+			font-size: 15pt;
+			width: 350px;
+			height: 350px;
+			position: relative;
+			left: 50%; top: 60%;
+			margin-left: -175px; /* margin : 테두리 밖으로 설정되는 여백 */ 
+            margin-top: -175px;
+			text-align: center;		
+			
+		}
+	
+	</style>
+	
+</head>
+<body>
+	<div id = "container">
+	</div>
+	<div class ="title">
+	점심 뭐먹지?
+		<div class ="content">
+		오늘은 뭘 먹을까? <br>
+		항상 고민만 하시지 않으셨나요?<br>
+		점심 뭐먹지 페이지와 함께라면<br>
+		고민하지 않으셔도 됩니다.<br>
+		다음페이지로 이동해 메뉴를 골라주세요.<br>
+		</div>
+	</div>
+
+	
+	
+</body>
+</html>

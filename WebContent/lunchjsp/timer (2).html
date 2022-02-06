@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>** Timer **</title>
+<script>
+	function clock(){
+		var hour = 12;
+		var minute = 30;
+		var now = new Date();
+		var ss = 60-now.getSeconds();
+		var mm = minute+59-now.getMinutes();
+		hh = hour-1-now.getHours();
+		if(mm>=60){
+			hh += 1;
+			mm = mm%60;
+		}
+        if(ss>=60){
+			mm += 1;
+			ss = ss%60;
+		} 
+
+                        // 종료 시점                     
+                        if(hh==0&&mm==0&&ss==0) location.reload(true);	
+                        // 종료 이후	
+		else if(hh<0){
+                                    document.getElementById("clock").innerHTML = "투표시간이 종료 되었습니다.";
+		}
+                        // 세 시간 전 ~ 종료 직전
+		else if(hh<3){
+			document.getElementById("clock").innerHTML = hh+":"+mm+":"+ss;
+			setTimeout("clock()",1000);
+                        // 세 시간 이상 남음
+		}else document.getElementById("clock").innerHTML = "시간이 많이 남았어요.";
+	}
+</script>
+</head>
+<body onload="clock()">
+<div id="clock">종료</div>
+</body>
+</html>
